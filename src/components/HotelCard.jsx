@@ -18,7 +18,7 @@ function HotelCard({ hotel }) {
 
   return (
 
-    <div className="bg-white dark:bg-slate-900 rounded-[35px] overflow-hidden shadow-xl hover:shadow-2xl hover:scale-[1.02] transition duration-300 border border-gray-200">
+    <div className="bg-white dark:bg-slate-900 rounded-[25px] sm:rounded-[35px] overflow-hidden shadow-xl hover:shadow-2xl hover:scale-[1.02] transition duration-300 border border-gray-200">
 
       {/* Hotel Image */}
 

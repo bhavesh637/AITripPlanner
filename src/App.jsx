@@ -1489,13 +1489,13 @@ if (
     
       
       <div
-        className={`min-h-screen transition duration-500 ${darkMode
+        className={`min-h-screen transition duration-500 overflow-x-hidden scale-[0.88] sm:scale-100 origin-top px-2 sm:px-5 md:px-8 ${darkMode
             ? "bg-slate-950 text-white"
             : "bg-gradient-to-br from-slate-100 via-blue-100 to-slate-200"
           }`}
       >
 
-        <nav className="flex justify-between items-center bg-white/70 backdrop-blur-lg p-6 rounded-3xl shadow-2xl border border-white/20 mb-10 sticky top-4 z-50">
+        <nav className="flex flex-row justify-between items-center gap-3 overflow-x-auto bg-white/70 backdrop-blur-lg p-5 sm:p-6 rounded-[35px] shadow-2xl border border-white/20 mb-8 md:sticky md:top-4 z-50">
 
           <h1
             onClick={() => {
@@ -1508,7 +1508,7 @@ if (
               setImageUrl("");
 
             }}
-            className="text-3xl font-bold cursor-pointer hover:text-blue-600 transition"
+           className="text-xl sm:text-3xl font-bold cursor-pointer hover:text-blue-600 transition text-center leading-tight"
           >
             AI Travel Planner
           </h1>
@@ -1517,7 +1517,7 @@ if (
             {
               user ? (
 
-                <div className="flex items-center gap-4">
+                <div className="flex flex-wrap items-center justify-center gap-4">
 
                   <img
                     src={user.photoURL}
@@ -1538,7 +1538,7 @@ if (
 
                 <button
                   onClick={login}
-                  className="bg-blue-600 text-white px-5 py-3 rounded-xl"
+                  className="bg-blue-600 text-white px-4 py-3 sm:px-5 rounded-2xl text-sm sm:text-base shadow-lg"
                 >
                   Login with Google
                 </button>
@@ -1548,7 +1548,7 @@ if (
 
           </div>
 
-          <div className="space-x-6 text-lg">
+          <div className="flex flex-wrap justify-center gap-3 text-sm sm:text-lg">
 
             <button
               onClick={() =>
@@ -1591,13 +1591,13 @@ if (
 
         <div
           ref={homeRef}
-          className={`backdrop-blur-xl border shadow-2xl rounded-[40px] p-10 w-full max-w-5xl mx-auto transition duration-500 ${darkMode
+          className={`backdrop-blur-xl border shadow-2xl rounded-[25px] sm:rounded-[40px] p-4 sm:p-6 md:p-10 w-full max-w-5xl mx-auto transition duration-500 ${darkMode
               ? "bg-slate-900/90 border-slate-700 text-white"
               : "bg-white/70 border-white/30 text-black"
             }`}
         >
 
-          <h1 className="text-5xl font-bold text-center mb-8">
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-6 leading-tight">
             AI Travel Planner
           </h1>
           <div className="relative mb-10">
@@ -1605,16 +1605,16 @@ if (
             <img
               src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
               alt="travel"
-              className="w-full h-[420px] rounded-[40px] object-cover shadow-2xl"
+              className="w-full h-[250px] sm:h-[320px] md:h-[420px] rounded-[35px] sm:rounded-[40px] object-cover shadow-2xl"
             />
 
-            <div className="absolute inset-0 bg-black/40 rounded-[40px] flex flex-col justify-center items-center text-center p-8">
+            <div className="absolute inset-0 bg-black/40 rounded-[25px] sm:rounded-[40px] flex flex-col justify-center items-center text-center p-4 sm:p-8">
 
-              <h1 className="text-6xl font-bold text-white mb-5">
+              <h1 className="text-2xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
                 Explore The World
               </h1>
 
-              <p className="text-white text-2xl max-w-2xl">
+              <p className="text-white text-base sm:text-xl md:text-2xl max-w-2xl px-3">
                 AI-powered smart trip planning
                 for unforgettable journeys
               </p>
@@ -1625,19 +1625,19 @@ if (
           {
             heroImage && (
 
-              <div className="mb-10 relative overflow-hidden rounded-[40px] shadow-2xl">
+              <div className="mb-10 relative overflow-hidden rounded-[25px] sm:rounded-[40px] shadow-2xl">
 
                 <img
                   src={heroImage || imageUrl}
                   alt="Travel Destination"
-                  className="w-full h-[450px] object-cover hover:scale-110 transition duration-700"
+                 className="w-full h-[220px] sm:h-[320px] md:h-[450px] object-cover hover:scale-110 transition duration-700"
                 />
 
-                <div className="absolute inset-0 bg-black/30 flex items-end p-10">
+                <div className="absolute inset-0 bg-black/30 flex items-end p-4 sm:p-8 md:p-10">
 
                   <div>
 
-                    <h2 className="text-5xl font-bold text-white mb-2">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2">
                       Explore {destination}
                     </h2>
 
@@ -1659,7 +1659,7 @@ if (
 
               <div className="mb-12">
 
-                <h2 className="text-4xl font-bold mb-8">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8">
                   Explore More of {destination}
                 </h2>
 
@@ -1671,13 +1671,13 @@ if (
 
                         <div
                           key={index}
-                          className="overflow-hidden rounded-[30px] shadow-xl bg-white hover:scale-105 transition duration-300"
+                          className="overflow-hidden rounded-[20px] sm:rounded-[30px] shadow-xl bg-white hover:scale-105 transition duration-300"
                         >
 
                           <img
                             src={item.image}
                             alt="destination"
-                            className="w-full h-72 object-cover"
+                            className="w-full h-40 sm:h-56 md:h-72 object-cover"
                           />
 
                           <div
@@ -1686,7 +1686,7 @@ if (
                                 : "bg-white text-black"
                               }`}
                           >
-                            <h3 className="text-xl font-bold">
+                            <h3 className="text-sm sm:text-lg md:text-xl font-bold">
                               {item.title}
                             </h3>
                           </div>
@@ -1714,7 +1714,7 @@ if (
       e.target.value
     )
   }
-  className={`w-full p-5 rounded-[25px] border outline-none transition ${
+  className={`w-full p-5 sm:p-5 rounded-[28px] text-sm sm:text-base border outline-none transition ${
     darkMode
       ? "bg-slate-800 text-white border-slate-600 placeholder:text-gray-400"
       : "bg-white text-black border-gray-300"
@@ -1726,7 +1726,7 @@ if (
               placeholder="Enter Destination"
               value={destination}
               onChange={(e) => setDestination(e.target.value)}
-              className={`w-full p-5 rounded-[25px] border outline-none transition ${darkMode
+              className={`w-full p-5 sm:p-5 rounded-[28px] text-sm sm:text-base border outline-none transition ${darkMode
                   ? "bg-slate-800 text-white border-slate-600 placeholder:text-gray-400"
                   : "bg-white text-black border-gray-300"
                 }`}
@@ -1737,7 +1737,7 @@ if (
               placeholder="Enter Budget"
               value={budget}
               onChange={(e) => setBudget(e.target.value)}
-              className={`w-full p-5 rounded-[25px] border outline-none transition ${darkMode
+              className={`w-full p-5 sm:p-5 rounded-[28px] text-sm sm:text-base border outline-none transition ${darkMode
                   ? "bg-slate-800 text-white border-slate-600 placeholder:text-gray-400"
                   : "bg-white text-black border-gray-300"
                 }`}
@@ -1748,7 +1748,7 @@ if (
               placeholder="Number of Days"
               value={days}
               onChange={(e) => setDays(e.target.value)}
-              className={`w-full p-5 rounded-[25px] border outline-none transition ${darkMode
+              className={`w-full p-5 sm:p-5 rounded-[28px] text-sm sm:text-base border outline-none transition ${darkMode
                   ? "bg-slate-800 text-white border-slate-600 placeholder:text-gray-400"
                   : "bg-white text-black border-gray-300"
                 }`}
@@ -1756,7 +1756,7 @@ if (
             <select
               value={tripType}
               onChange={(e) => setTripType(e.target.value)}
-              className={`w-full p-5 rounded-[25px] border outline-none transition ${darkMode
+              className={`w-full p-5 sm:p-5 rounded-[28px] text-sm sm:text-base border outline-none transition ${darkMode
                   ? "bg-slate-800 text-white border-slate-600"
                   : "bg-white text-black border-gray-300"
                 }`}
@@ -1790,7 +1790,7 @@ if (
             <select
               value={hotelType}
               onChange={(e) => setHotelType(e.target.value)}
-              className={`w-full p-5 rounded-[25px] border outline-none transition ${darkMode
+              className={`w-full p-5 sm:p-5 rounded-[28px] text-sm sm:text-base border outline-none transition ${darkMode
                   ? "bg-slate-800 text-white border-slate-600"
                   : "bg-white text-black border-gray-300"
                 }`}
@@ -1820,7 +1820,7 @@ if (
             <select
               value={mood}
               onChange={(e) => setMood(e.target.value)}
-              className={`w-full p-5 rounded-[25px] border outline-none transition ${darkMode
+              className={`w-full p-5 sm:p-5 rounded-[28px] text-sm sm:text-base border outline-none transition ${darkMode
                   ? "bg-slate-800 text-white border-slate-600"
                   : "bg-white text-black border-gray-300"
                 }`}
@@ -1852,7 +1852,7 @@ if (
             <button
               onClick={handleSubmit}
               disabled={loading}
-              className="w-full bg-black text-white py-5 rounded-2xl text-xl font-bold transition hover:scale-[1.02]"
+             className="w-full bg-black text-white py-3 sm:py-5 rounded-2xl text-base sm:text-xl font-bold transition hover:scale-[1.02]"
             >
               {loading ? (
                 <div className="flex flex-col items-center gap-2">
@@ -1903,7 +1903,7 @@ if (
 
               <div className="mt-10">
 
-                <h2 className="text-4xl font-bold mb-5">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-5">
 
                   Saved Trip Details
 
@@ -1930,7 +1930,7 @@ if (
                             className="bg-white p-5 rounded-2xl shadow-lg"
                           >
 
-                            <h3 className="text-xl font-bold">
+                            <h3 className="text-sm sm:text-lg md:text-xl font-bold">
 
                               Day {day.day}:
                               {day.title}
@@ -1980,7 +1980,7 @@ if (
                   Saved Trips
                 </h2>
 
-                <div className="grid md:grid-cols-2 gap-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
                   {
                     savedTrips.map((trip, index) => (
@@ -2024,7 +2024,7 @@ if (
   });
 
 }}
-                        className={`rounded-[35px] p-8 shadow-xl transition ${darkMode
+                        className={`rounded-[25px] sm:rounded-[35px] p-4 sm:p-8 shadow-xl transition ${darkMode
                             ? "bg-slate-800 text-white"
                             : "bg-white text-black"
                           }`}
@@ -2122,18 +2122,18 @@ if (
 
               <div
                 className={`bg-gradient-to-br ${weatherBg}
-      rounded-[40px]
-      p-10
+      rounded-[25px] sm:rounded-[40px]
+      p-4 sm:p-8 md:p-10
       shadow-2xl
       my-10
       text-white`}
               >
 
-                <div className="flex justify-between items-center mb-10">
+                <div className="flex flex-col md:flex-row justify-between items-center gap-5 mb-10">
 
                   <div>
 
-                    <h2 className="text-5xl font-extrabold">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold">
                       🌦 Weather Information
                     </h2>
 
@@ -2143,7 +2143,7 @@ if (
 
                   </div>
 
-                  <h1 className="text-7xl font-black">
+                  <h1 className="text-4xl sm:text-6xl md:text-7xl font-black">
                     {weather?.main?.temp ?? "N/A"}°
                   </h1>
 
@@ -2151,49 +2151,49 @@ if (
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-                  <div className="bg-white/20 backdrop-blur-xl rounded-[30px] p-8">
+                  <div className="bg-white/20 backdrop-blur-xl rounded-[20px] sm:rounded-[30px]p-4 sm:p-8">
 
                     <p className="text-2xl font-semibold">
                       🌡 Temperature
                     </p>
 
-                    <h3 className="text-4xl font-bold mt-4">
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-4">
                       {weather?.main?.temp ?? "N/A"}°C
                     </h3>
 
                   </div>
 
-                  <div className="bg-white/20 backdrop-blur-xl rounded-[30px] p-8">
+                  <div className="bg-white/20 backdrop-blur-xl rounded-[20px] sm:rounded-[30px] p-4 sm:p-8">
 
                     <p className="text-2xl font-semibold">
                       💨 Wind Speed
                     </p>
 
-                    <h3 className="text-4xl font-bold mt-4">
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-4">
                       {weather?.wind?.speed ?? "N/A"} km/h
                     </h3>
 
                   </div>
 
-                  <div className="bg-white/20 backdrop-blur-xl rounded-[30px] p-8">
+                  <div className="bg-white/20 backdrop-blur-xl rounded-[20px] sm:rounded-[30px] p-4 sm:p-8">
 
                     <p className="text-2xl font-semibold">
                       💧 Humidity
                     </p>
 
-                    <h3 className="text-4xl font-bold mt-4">
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-4">
                       {weather?.main?.humidity ?? "N/A"}%
                     </h3>
 
                   </div>
 
-                  <div className="bg-white/20 backdrop-blur-xl rounded-[30px] p-8">
+                  <div className="bg-white/20 backdrop-blur-xl rounded-[20px] sm:rounded-[30px] p-4 sm:p-8">
 
                     <p className="text-2xl font-semibold">
                       ☁ Condition
                     </p>
 
-                    <h3 className="text-4xl font-bold mt-4">
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-4">
                       {weather?.weather?.[0]?.main || "N/A"}
                     </h3>
 
@@ -2210,7 +2210,7 @@ if (
             budget && (
 
               <div
-                className={`rounded-[35px] p-8 shadow-xl transition ${darkMode
+                className={`rounded-[25px] sm:rounded-[35px] p-4 sm:p-8 shadow-xl transition ${darkMode
                     ? "bg-slate-800 text-white"
                     : "bg-white text-black"
                   }`}
@@ -2220,7 +2220,7 @@ if (
 
                   <div>
 
-                    <h2 className="text-4xl font-bold">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
                       💰 Budget Analytics
                     </h2>
 
@@ -2230,7 +2230,7 @@ if (
 
                   </div>
 
-                  <h1 className="text-5xl font-black text-blue-600">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-blue-600">
                     ₹{totalBudget.toLocaleString()}
                   </h1>
 
@@ -2393,17 +2393,17 @@ if (
             budget && (
 
               <div
-                className={`my-10 rounded-[35px] p-8 shadow-2xl ${darkMode
+                className={`my-10 rounded-[25px] sm:rounded-[35px] p-4 sm:p-8 shadow-2xl ${darkMode
                     ? "bg-slate-800 text-white"
                     : "bg-white text-black"
                   }`}
               >
 
-                <h2 className="text-4xl font-bold mb-6">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
                   🧾 Expense Tracker
                 </h2>
 
-                <div className="grid md:grid-cols-2 gap-4 mb-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
 
                   <input
                     type="text"
@@ -2530,7 +2530,7 @@ if (
 
                             ) : (
 
-                              <div className="flex justify-between items-center">
+                              <div className="flex flex-col sm:flex-row justify-between items-center gap-3 px-4 py-3">
 
                                 <div>
 
@@ -2588,28 +2588,28 @@ if (
 
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
                   <div
-                    className="bg-red-500 text-white rounded-[30px] p-6"
+                    className="bg-red-500 text-white rounded-[20px] sm:rounded-[30px] p-6"
                   >
-                    <h3 className="text-xl font-bold">
+                    <h3 className="text-sm sm:text-lg md:text-xl font-bold">
                       Total Spent
                     </h3>
 
-                    <p className="text-4xl font-black mt-2">
+                    <p className="text-2xl sm:text-3xl md:text-4xl font-black mt-2">
                       ₹{totalSpent}
                     </p>
                   </div>
 
                   <div
-                    className="bg-green-600 text-white rounded-[30px] p-6"
+                    className="bg-green-600 text-white rounded-[20px] sm:rounded-[30px] p-6"
                   >
-                    <h3 className="text-xl font-bold">
+                    <h3 className="text-sm sm:text-lg md:text-xl font-bold">
                       Remaining Budget
                     </h3>
 
-                    <p className="text-4xl font-black mt-2">
+                    <p className="text-2xl sm:text-3xl md:text-4xll font-black mt-2">
                       ₹{remainingBudget}
                     </p>
                   </div>
@@ -2626,7 +2626,7 @@ if (
             ).length > 0 && (
 
               <div
-                className={`my-10 rounded-[35px] p-8 shadow-2xl ${darkMode
+                className={`my-10 rounded-[25px] sm:rounded-[35px] p-4 sm:p-8 shadow-2xl ${darkMode
                     ? "bg-slate-800 text-white"
                     : "bg-white text-black"
                   }`}
@@ -2636,7 +2636,7 @@ if (
 
                   <div>
 
-                    <h2 className="text-4xl font-black">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-black">
                       📅 Day Wise Spending
                     </h2>
 
@@ -2653,7 +2653,7 @@ if (
 
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
                   {
                     Object.entries(
@@ -2666,7 +2666,7 @@ if (
 
                         <div
                           key={day}
-                          className={`rounded-[30px] p-6 shadow-lg transition hover:scale-105 ${darkMode
+                          className={`rounded-[20px] sm:rounded-[30px] p-6 shadow-lg transition hover:scale-105 ${darkMode
                               ? "bg-slate-700"
                               : "bg-slate-100"
                             }`}
@@ -2676,7 +2676,7 @@ if (
                             {day}
                           </h3>
 
-                          <p className="text-4xl font-black mt-4 text-blue-600">
+                          <p className="text-2xl sm:text-3xl md:text-4xl font-black mt-4 text-blue-600">
                             ₹{amount}
                           </p>
 
@@ -2696,7 +2696,7 @@ if (
             expenses.length > 0 && (
 
               <div
-                className={`mt-8 rounded-[35px] p-6 shadow-xl ${darkMode
+                className={`mt-8 rounded-[25px] sm:rounded-[35px] p-6 shadow-xl ${darkMode
                     ? "bg-slate-800 text-white"
                     : "bg-white text-black"
                   }`}
@@ -2711,17 +2711,17 @@ if (
                       ).length > 0 && (
 
                         <div
-                          className={`my-10 rounded-[35px] p-8 shadow-2xl ${darkMode
+                          className={`my-10 rounded-[25px] sm:rounded-[35px] p-4 sm:p-8 shadow-2xl ${darkMode
                               ? "bg-slate-800 text-white"
                               : "bg-white text-black"
                             }`}
                         >
 
-                          <h2 className="text-4xl font-black mb-6">
+                          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-6">
                             📅 Day Wise Spending
                           </h2>
 
-                          <div className="grid md:grid-cols-3 gap-5">
+                          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
                             {
                               Object.entries(
@@ -2762,7 +2762,7 @@ if (
                       )
                     }
 
-                    <h2 className="text-4xl font-black">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-black">
                       📊 Expense Analytics
                     </h2>
 
@@ -2788,7 +2788,7 @@ if (
                 <div
                   style={{
                     width: "100%",
-                    height: 350,
+                    height: window.innerWidth < 640 ? 260 : 350,
                   }}
                 >
 
@@ -2803,8 +2803,8 @@ if (
                         data={expenseChartData}
                         cx="50%"
                         cy="50%"
-                        outerRadius={130}
-                        innerRadius={70}
+                        outerRadius={window.innerWidth < 640 ? 80 : 130}
+innerRadius={window.innerWidth < 640 ? 40 : 70}
                         dataKey="value"
                         nameKey="name"
                         paddingAngle={4}
@@ -2856,7 +2856,7 @@ if (
             scamAlerts.length > 0 && (
 
               <div
-                className={`my-10 rounded-[35px] p-8 shadow-2xl ${darkMode
+                className={`my-10 rounded-[25px] sm:rounded-[35px] p-4 sm:p-8 shadow-2xl ${darkMode
                     ? "bg-red-950 text-white"
                     : "bg-red-50 text-black"
                   }`}
@@ -2866,13 +2866,13 @@ if (
                   travelCost && (
 
                     <div
-                      className={`my-10 rounded-[35px] p-8 shadow-2xl ${darkMode
+                      className={`my-10 rounded-[25px] sm:rounded-[35px] p-4 sm:p-8 shadow-2xl ${darkMode
                           ? "bg-slate-800 text-white"
                           : "bg-white text-black"
                         }`}
                     >
 
-                      <h2 className="text-4xl font-black mb-6">
+                      <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-6">
                         ✈ Travel Cost Estimator
                       </h2>
 
@@ -2886,30 +2886,30 @@ if (
   {startingCity} → {destination}
 </p>
 
-                      <div className="grid md:grid-cols-2 gap-5">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
-                        <div className="rounded-[30px] bg-blue-600 text-white p-6">
+                        <div className="rounded-[20px] sm:rounded-[30px] bg-blue-600 text-white p-6">
                           ✈ Flight
                           <h3 className="text-3xl font-black mt-2">
                             {travelCost.flight}
                           </h3>
                         </div>
 
-                        <div className="rounded-[30px] bg-green-600 text-white p-6">
+                        <div className="rounded-[20px] sm:rounded-[30px] bg-green-600 text-white p-6">
                           🚆 Train
                           <h3 className="text-3xl font-black mt-2">
                             {travelCost.train}
                           </h3>
                         </div>
 
-                        <div className="rounded-[30px] bg-orange-600 text-white p-6">
+                        <div className="rounded-[20px] sm:rounded-[30px] bg-orange-600 text-white p-6">
                           🚌 Bus
                           <h3 className="text-3xl font-black mt-2">
                             {travelCost.bus}
                           </h3>
                         </div>
 
-                        <div className="rounded-[30px] bg-purple-600 text-white p-6">
+                        <div className="rounded-[20px] sm:rounded-[30px] bg-purple-600 text-white p-6">
                           ⛽ Self Drive
                           <h3 className="text-3xl font-black mt-2">
                             {travelCost.selfDrive}
@@ -2923,7 +2923,7 @@ if (
                   )
                 }
 
-                <h2 className="text-4xl font-bold mb-6">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
                   🚨 Scam Alerts
                 </h2>
 
@@ -2936,7 +2936,7 @@ if (
                   Stay aware of common tourist scams in {destination}
                 </p>
 
-                <div className="grid md:grid-cols-2 gap-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
                   {
                     scamAlerts.map(
@@ -2966,7 +2966,7 @@ if (
             budgetAdvice && (
 
               <div
-                className={`my-10 rounded-[35px] p-8 shadow-2xl ${darkMode
+                className={`my-10 rounded-[25px] sm:rounded-[35px] p-4 sm:p-8 shadow-2xl ${darkMode
                     ? "bg-yellow-900 text-white"
                     : "bg-yellow-50 text-black"
                   }`}
@@ -2977,18 +2977,18 @@ if (
     .length > 0 && (
 
     <div
-      className={`my-10 rounded-[35px] p-8 shadow-2xl ${
+      className={`my-10 rounded-[25px] sm:rounded-[35px] p-4 sm:p-8 shadow-2xl ${
         darkMode
           ? "bg-slate-800 text-white"
           : "bg-white text-black"
       }`}
     >
 
-      <h2 className="text-4xl font-black mb-6">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-6">
         🔔 Smart Alerts
       </h2>
 
-      <div className="grid md:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
         {
           smartNotifications.map(
@@ -3019,11 +3019,11 @@ if (
   )
 }
 
-                <h2 className="text-4xl font-bold mb-6">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
                   🧠 Smart Budget AI
                 </h2>
 
-                <div className="grid md:grid-cols-2 gap-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
                   <div
                     className={`rounded-[25px] p-6 ${darkMode
@@ -3071,7 +3071,7 @@ if (
                     🤖 AI Suggestions
                   </h3>
 
-                  <div className="grid md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
                     {
                       budgetAdvice.tips?.map(
@@ -3104,17 +3104,17 @@ if (
             travelTips.length > 0 && (
 
               <div
-                className={`my-10 rounded-[35px] p-8 shadow-2xl ${darkMode
+                className={`my-10 rounded-[25px] sm:rounded-[35px] p-4 sm:p-8 shadow-2xl ${darkMode
                     ? "bg-slate-800 text-white"
                     : "bg-white text-black"
                   }`}
               >
 
-                <h2 className="text-4xl font-bold mb-6">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
                   🤖 AI Travel Tips
                 </h2>
 
-                <div className="grid md:grid-cols-2 gap-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
                   {
                     travelTips.map(
@@ -3166,9 +3166,9 @@ if (
         ]}
         zoom={12}
         style={{
-          height: "400px",
+          height: window.innerWidth < 640 ? "250px" : "400px",
           width: "100%",
-          borderRadius: "20px"
+          borderRadius: window.innerWidth < 640 ? "16px" : "24px"
         }}
       >
 
@@ -3222,7 +3222,7 @@ if (
                   Recommended Hotels
                 </h2>
 
-                <div className="grid md:grid-cols-3 gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
                   {
                     hotels.map((hotel, index) => (
@@ -3250,7 +3250,7 @@ if (
 
               <div className="mt-10">
 
-                <h2 className="text-4xl font-bold mb-8">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8">
                   {tripPlan.tripTitle}
                 </h2>
 
@@ -3261,7 +3261,7 @@ if (
 
                       <div
                         key={index}
-                        className="relative flex gap-6"
+                       className="relative flex flex-col md:flex-row gap-6"
                       >
 
                         {/* Timeline line */}
@@ -3284,7 +3284,7 @@ if (
                         {/* Day Card */}
 
                         <div
-                          className={`shadow-2xl rounded-[35px] p-8 flex-1 transition ${darkMode
+                          className={`shadow-2xl rounded-[25px] sm:rounded-[35px] p-4 sm:p-8 flex-1 transition ${darkMode
                               ? "bg-slate-800 text-white"
                               : "bg-white text-black"
                             }`}
@@ -3300,7 +3300,7 @@ if (
 
                               </span>
 
-                              <h3 className="text-3xl font-bold mt-4">
+                              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mt-4">
 
                                 {dayPlan.title}
 
@@ -3346,7 +3346,7 @@ if (
 
                           {/* Food & Hotel */}
 
-                          <div className="grid md:grid-cols-2 gap-4">
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
                             <div
                               className={`rounded-[25px] p-5 ${darkMode

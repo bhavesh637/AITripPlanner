@@ -182,3 +182,132 @@
     border-right-color: var(--border);
   }
 }
+/* Mobile & Tablet Responsive Fix */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+
+  h1 {
+    font-size: 42px !important;
+  }
+
+}
+
+/* Mobile */
+@media (max-width:768px) {
+
+  /* Navbar */
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  /* Buttons */
+  button {
+    width: 100%;
+  }
+
+  /* Hero section */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 34px !important;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+/* Small phones */
+@media (max-width:480px) {
+
+  h1 {
+    font-size: 28px !important;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+}
+/* Mobile UI improvement */
+@media (max-width:768px) {
+
+  /* Top section spacing */
+  nav {
+    padding: 18px 20px !important;
+    gap: 14px;
+    align-items: center;
+  }
+
+  /* Login button */
+  button {
+    border-radius: 18px;
+  }
+
+  /* Hero section top gap */
+  .hero {
+    padding-top: 20px;
+  }
+
+  /* Heading */
+  h1 {
+    font-size: 52px !important;
+    line-height: 1.1;
+    margin-bottom: 18px;
+  }
+
+  /* Input spacing */
+  input,
+  select {
+    margin-bottom: 22px;
+    padding: 20px !important;
+    border-radius: 30px;
+  }
+
+  /* Generate button */
+  .generate-btn {
+    margin-top: 25px;
+    border-radius: 28px;
+    padding: 18px;
+  }
+
+}
+@media (max-width:768px) {
+
+  .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+}

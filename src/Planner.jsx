@@ -1,6 +1,6 @@
 function Planner() {
   return (
-    <div className="p-10">
+    <div className="p-4 sm:p-8 md:p-10">
 
       <h1 className="text-4xl font-bold mb-5">
         Planner Page

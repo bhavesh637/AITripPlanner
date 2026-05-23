@@ -4,11 +4,11 @@ function Home() {
   return (
     <div className="flex flex-col items-center justify-center h-screen">
 
-      <h1 className="text-5xl font-bold mb-5">
+      <h1 className="text-2xl sm:text-5xl font-bold mb-5 text-center">
         AI Travel Planner
       </h1>
 
-      <p className="text-xl mb-6">
+      <p className="text-sm sm:text-xl mb-6 text-center px-4">
         Generate smart AI travel itineraries
       </p>
 
