@@ -1489,7 +1489,7 @@ if (
     
       
       <div
-        className={`min-h-screen transition duration-500 overflow-x-hidden scale-[0.88] sm:scale-100 origin-top px-2 sm:px-5 md:px-8 ${darkMode
+        className={`min-h-screen transition duration-500 overflow-x-hidden px-2 sm:px-5 md:px-8 ${darkMode
             ? "bg-slate-950 text-white"
             : "bg-gradient-to-br from-slate-100 via-blue-100 to-slate-200"
           }`}
